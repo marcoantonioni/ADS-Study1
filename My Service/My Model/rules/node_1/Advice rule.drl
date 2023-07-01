@@ -4,7 +4,7 @@
   <uuid>92d98aa7-b028-413e-8c1e-af67f4ca1818</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if
-	Name is defined 
+    Name is defined
 then
-	set decision to `Hello { Name }!` ;]]></definition>
+    set decision to `Hello { 'Name' }! { 'Weather advice' }` ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>
