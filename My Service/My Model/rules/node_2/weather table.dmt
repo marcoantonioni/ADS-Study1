@@ -13,14 +13,23 @@
             <ConditionDefinitions>
                 <ConditionDefinition Id="C0">
                     <ExpressionDefinition>
-                        <Text><![CDATA['Rain forecast' is at least <min> and less than <max>]]></Text>
+                        <Text><![CDATA[the rain forecast of 'Weather' is at least <min> and less than <max>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C2">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the temperature of Weather is <a temperature>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
             </ConditionDefinitions>
             <ActionDefinitions>
                 <ActionDefinition Id="A0">
                     <ExpressionDefinition>
-                        <Text><![CDATA[set decision to <a string>]]></Text>
+                        <Text><![CDATA[set 'decision' to <a string>]]></Text>
                     </ExpressionDefinition>
                 </ActionDefinition>
             </ActionDefinitions>
@@ -32,26 +41,40 @@
                         <Param><![CDATA[0]]></Param>
                         <Param><![CDATA[20]]></Param>
                     </Expression>
-                    <ActionSet>
-                        <Action DefId="A0">
+                    <Partition DefId="C2">
+                        <Condition>
                             <Expression>
-                                <Param><![CDATA["Nice day. Enjoy the weather!"]]></Param>
+                                <Param><![CDATA[cold]]></Param>
                             </Expression>
-                        </Action>
-                    </ActionSet>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["Cold day. Take a coat."]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
                 </Condition>
                 <Condition>
                     <Expression>
                         <Param><![CDATA[20]]></Param>
                         <Param><![CDATA[80]]></Param>
                     </Expression>
-                    <ActionSet>
-                        <Action DefId="A0">
+                    <Partition DefId="C2">
+                        <Condition>
                             <Expression>
-                                <Param><![CDATA["Risk of rain. Might need an umbrella."]]></Param>
+                                <Param><![CDATA[warm]]></Param>
                             </Expression>
-                        </Action>
-                    </ActionSet>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["Risk of rain. Might need an umbrella."]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
                 </Condition>
                 <Condition>
                     <Expression>
@@ -59,13 +82,20 @@
                         <Param><![CDATA[80]]></Param>
                         <Param><![CDATA[100]]></Param>
                     </Expression>
-                    <ActionSet>
-                        <Action DefId="A0">
+                    <Partition DefId="C2">
+                        <Condition>
                             <Expression>
-                                <Param><![CDATA["Rainy day. Take an umbrella."]]></Param>
+                                <Param><![CDATA[hot]]></Param>
                             </Expression>
-                        </Action>
-                    </ActionSet>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["Rainy day. Take an umbrella."]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
                 </Condition>
                 <Condition>
                     <Expression/>
@@ -100,8 +130,11 @@
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
-            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Rain forecast]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Rain forecast %]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[Temperature]]></Data>
+            <Data Name="Definitions(C0)[0]#HeaderText"><![CDATA[min]]></Data>
             <Data Name="Definitions(A0)#HeaderText"><![CDATA[Weather advice]]></Data>
+            <Data Name="Definitions(C0)[1]#HeaderText"><![CDATA[max]]></Data>
         </ResourceSet>
     </Resources>
 </DT>
