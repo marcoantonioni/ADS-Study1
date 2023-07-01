@@ -1,1 +1,1 @@
-{"operationId":"ac53c994-da46-4bd4-a789-81473d301bf4","body":{"name":"Marco","weather":{"rainForecast":10,"temperature":"hot"}}}
+{"operationId":"ac53c994-da46-4bd4-a789-81473d301bf4","body":{"name":"Marco","weather":{"rainForecast":1,"temperature":"cold","stormAlert":true}}}
