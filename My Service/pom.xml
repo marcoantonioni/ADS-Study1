@@ -65,6 +65,7 @@
     </dependencyManagement>
     <modules>
         <module>My Model</module>
+        <module>Data</module>
         <module>.decisionservice</module>
     </modules>
 
