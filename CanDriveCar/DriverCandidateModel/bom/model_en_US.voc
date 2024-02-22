@@ -1,0 +1,24 @@
+
+# cp4admin.test1.candrivecar.candidate.Applicant
+cp4admin.test1.candrivecar.candidate.Applicant#concept.documentation = 
+cp4admin.test1.candrivecar.candidate.Applicant#concept.label = Applicant
+cp4admin.test1.candrivecar.candidate.Applicant.Applicant(int,java.lang.String)#phrase.navigation = a new {Applicant} where {0, age} {1, name}
+cp4admin.test1.candrivecar.candidate.Applicant.age#phrase.action = set the age of {this} to {age}
+cp4admin.test1.candrivecar.candidate.Applicant.age#phrase.addition_setter = add {age} to the age of {this}
+cp4admin.test1.candrivecar.candidate.Applicant.age#phrase.navigation = {age} of {this}
+cp4admin.test1.candrivecar.candidate.Applicant.age#phrase.subtraction_setter = subtract {age} from the age of {this}
+cp4admin.test1.candrivecar.candidate.Applicant.name#phrase.action = set the name of {this} to {name}
+cp4admin.test1.candrivecar.candidate.Applicant.name#phrase.navigation = {name} of {this}
+
+# cp4admin.test1.candrivecar.candidate.CanDriveResponse
+cp4admin.test1.candrivecar.candidate.CanDriveResponse#concept.label = CanDriveResponse
+cp4admin.test1.candrivecar.candidate.CanDriveResponse.CanDriveResponse(boolean,java.lang.String)#phrase.navigation = a new {CanDriveResponse} where {0, canDrive} {1, name}
+cp4admin.test1.candrivecar.candidate.CanDriveResponse.canDrive#phrase.action[0] = {this} gets canDrive only if {canDrive}
+cp4admin.test1.candrivecar.candidate.CanDriveResponse.canDrive#phrase.action[1] = make it {canDrive} that {this} is canDrive
+cp4admin.test1.candrivecar.candidate.CanDriveResponse.canDrive#phrase.action[1].deprecated = true
+cp4admin.test1.candrivecar.candidate.CanDriveResponse.canDrive#phrase.navigation = {this} is canDrive
+cp4admin.test1.candrivecar.candidate.CanDriveResponse.canDrive#phrase.negative_predicate = {this} is not canDrive
+cp4admin.test1.candrivecar.candidate.CanDriveResponse.canDrive#phrase.negative_predicate_setter = {this} does not get canDrive
+cp4admin.test1.candrivecar.candidate.CanDriveResponse.canDrive#phrase.positive_predicate_setter = {this} gets canDrive
+cp4admin.test1.candrivecar.candidate.CanDriveResponse.name#phrase.action = set the name of {this} to {name}
+cp4admin.test1.candrivecar.candidate.CanDriveResponse.name#phrase.navigation = {name} of {this}

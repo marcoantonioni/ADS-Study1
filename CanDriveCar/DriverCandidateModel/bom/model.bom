@@ -1,0 +1,48 @@
+
+package cp4admin.test1.candrivecar.candidate;
+
+
+class Applicant
+        property ads.typeId "1"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Applicant"
+        #de.generated
+{
+    int age
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "age"
+                #update;
+    string name
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "name"
+                #update;
+    Applicant(int age, string name)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Applicant()
+                #dataio.default;
+}
+
+class CanDriveResponse
+        property ads.typeId "2"
+        property com.fasterxml.jackson.annotation.JsonTypeName "CanDriveResponse"
+        #de.generated
+{
+    boolean canDrive
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "canDrive"
+                #update;
+    string name
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "name"
+                #update;
+    CanDriveResponse(boolean canDrive, string name)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    CanDriveResponse()
+                #dataio.default;
+}
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="CanDriveModel">
+  <name>CanDriveModel</name>
+  <uuid>187f7f25-ed70-42c2-9a27-1a2e5bfdcb0c</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#3e255547-2abd-4ebe-8797-e8bc8bc49642"/>
+  <targetRuleProject href="../../CanDriveModel#4008e03d-b56a-415e-b122-252e59d98409"/>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["CanDriveCar"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

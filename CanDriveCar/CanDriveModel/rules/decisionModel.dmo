@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>3e255547-2abd-4ebe-8797-e8bc8bc49642</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Applicant">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="cp4admin.test1.candrivecar.candidate.Applicant" collection="false" name="Applicant"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Applicant" typeRef="cp4admin.test1.candrivecar.candidate.Applicant"/>
+    </inputData>
+    <decision id="node_1" name="CanDrive">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="cp4admin.test1.candrivecar.candidate.Applicant" collection="false" name="Applicant"/>
+                <output bomType="cp4admin.test1.candrivecar.candidate.CanDriveResponse" collection="false" name="CanDrive"/>
+                <rule defaultRule="false" href="node_1/CanDrive.drl" kind="BusinessRule" name="CanDrive"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="CanDrive" typeRef="cp4admin.test1.candrivecar.candidate.CanDriveResponse"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

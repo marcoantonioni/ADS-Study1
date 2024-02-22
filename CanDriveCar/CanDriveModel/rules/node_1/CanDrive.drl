@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CanDrive</name>
+  <uuid>23fceac5-96b5-4581-995a-03fd951a6f82</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the age of Applicant is at least 18 and less than 100    
+then
+	set decision to a new CanDriveResponse where
+		canDrive is true , 
+		the name is the name ;
+
+else 
+	set decision to a new CanDriveResponse where 
+	canDrive is false , 
+	the name is the name ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
